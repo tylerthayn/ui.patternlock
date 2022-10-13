@@ -1,0 +1,31 @@
+{
+  "name": "@tyler.thayn/ui.patternlock",
+  "version": "0.1.0",
+  "description": "jQueryUi widget of an android like pattern lock mechanism for web apps",
+  "main": "ui.patternlock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerthayn/ui.patternlock.git"
+  },
+  "keywords": [
+    "ui",
+    "patternlock",
+    "pattern",
+    "lock"
+  ],
+  "author": "Tyler Thayn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylerthayn/ui.patternlock/issues"
+  },
+  "homepage": "https://github.com/tylerthayn/ui.patternlock#readme",
+  "dependencies": {
+    "@tyler.thayn/web.core": "^0.1.1",
+    "jquery": "^3.6.1",
+    "jqueryui": "^1.11.1",
+    "requirejs": "^2.3.6"
+  }
+}

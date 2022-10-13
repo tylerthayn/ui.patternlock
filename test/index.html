@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>@tyler.thayn/ui.patternlock test</title>
+		<!--<link rel="stylesheet" href="../node_modules/jqueryui/jquery-ui.css">-->
+		<link rel="stylesheet" href="patternLock.css">
+		<script src="../node_modules/requirejs/require.js"></script>
+		<script>
+			require.config({
+				paths: {
+					'jquery': '../node_modules/jquery/dist/jquery',
+					'jquery-ui': '../node_modules/jqueryui/jquery-ui'
+				}
+			})
+			require(['jquery', '../ui.patternlock'], ($, PatternLock) => {
+				$(() => {
+					window.pl = new PatternLock({timeout:100})
+					$('button.Show').on('click', () => {
+						window.pl.Show().then(console.log)
+					})
+					$('button.Confirm').on('click', () => {
+						window.pl.Show(true).then(console.log)
+					})
+
+				})
+			})
+		</script>
+	</head>
+	<body class="TTS" style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+		<button class="btn btn-primary Show">Show</button>
+		<button class="btn btn-primary Confirm">Confirm</button>
+	</body>
+</html>
